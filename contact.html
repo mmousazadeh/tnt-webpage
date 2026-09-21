@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tnt-nanobiotech.ir — Contact</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
 
   <header>
     <div class="container header-inner">
-      <h1><a href="index.html">tnt-nanobiotech.ir</a></h1>
+      <!-- Logo added here, same as your home page -->
+      <h1><a href="index.html"><img src="logo.png" alt="TNT Nanobiotech Logo" class="logo"></a></h1>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -23,12 +25,19 @@
     <section class="container page">
       <h2>Contact</h2>
       <p>You can reach us at:</p>
-      <p><a href="mailto:">m.mousazadeh95@gmail.com</a></p>
-      <p><a href="mailto:">m.h.fouani@gmail.com</a></p>
+      <p><a href="mailto:m.mousazadeh95@gmail.com">m.mousazadeh95@gmail.com</a></p>
+      <p><a href="mailto:m.h.fouani@gmail.com">m.h.fouani@gmail.com</a></p>
+      
       <p>You can also contact us on social media using the following ID:</p>
-      <p><a href="mailto:">@yas_bio_usr</a></p>
+      <!-- I made this a clickable Instagram link assuming @yas_bio_usr is an Instagram handle -->
+      <p><a href="https://instagram.com/yas_bio_usr" target="_blank">@yas_bio_usr</a></p>
 
-      <form class="contact-form" action="m.mousazadeh95@gmail.com" method="post" enctype="text/plain">
+      <!-- Updated form to use your Formspree endpoint -->
+      <form class="contact-form" action="https://formspree.io/f/mnpndpvl" method="POST">
+        
+        <!-- This makes the email subject line nice when you receive the form submission -->
+        <input type="hidden" name="_subject" value="New submission from TNT website!">
+        
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
 
