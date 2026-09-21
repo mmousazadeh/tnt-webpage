@@ -42,10 +42,9 @@ header {
   gap: 1rem;
 }
 
-/* Cleaned up the logo CSS to only apply to the image */
 header h1 a .logo {
-  height: 50px; /* Change this number to make it bigger or smaller */
-  width: auto;  /* This keeps the logo from stretching weirdly */
+  height: 50px;
+  width: auto;
   vertical-align: middle;
 }
 
@@ -59,27 +58,32 @@ nav a:hover {
   color: #2563eb;
 }
 
-/* Hero */
+/* =========================================
+   HERO (Home Page Background Image)
+   ========================================= */
 .hero {
-  padding: 5rem 0;
+  padding: 8rem 0; /* Increased padding so the image is nice and tall */
   text-align: center;
-  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  background: url('hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
 }
 
+/* White text to stand out against the dark blue image */
 .hero h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
-  color: #111827;
+  color: #ffffff; 
 }
 
 .hero p {
   font-size: 1.15rem;
   margin-bottom: 2rem;
-  color: #4b5563;
+  color: #f1f5f9;
 }
 
 /* =========================================
-   BUTTONS: Swapped colors
+   BUTTONS: Blue default, Green on hover
    ========================================= */
 .btn {
   display: inline-block;
@@ -90,47 +94,44 @@ nav a:hover {
   border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease; /* Smooth color change */
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
   background: #064E3B; /* Dark Emerald Green (On Hover) */
   text-decoration: none;
 }
-/* ========================================= */
 
-/* Features (Updated for circles) */
+/* Features (Circles) */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem; /* Increased gap for better spacing */
+  gap: 2rem;
   padding: 4rem 0;
-  justify-items: center; /* This centers the circles */
+  justify-items: center;
 }
 
-/* Circle Base Styles */
 .card {
   width: 200px;
   height: 200px;
-  border-radius: 50%; /* Makes it a circle */
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border: none; /* Removed the old border */
-  transition: transform 0.2s; /* Nice hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Makes the circle grow slightly on hover */
+  transform: scale(1.05);
 }
 
-/* Typography inside circles */
 .card h3 {
-  font-size: 2.5rem; /* Makes the numbers bigger */
+  font-size: 2.5rem;
   margin-bottom: 0.2rem;
 }
 
@@ -140,26 +141,36 @@ nav a:hover {
   font-weight: 500;
 }
 
-/* Light Green Circle (Finished) */
-.card-green {
-  background-color: #d1fae5; /* Light green */
-  color: #064e3b; /* Dark green text */
+.card-green { background-color: #d1fae5; color: #064e3b; }
+.card-white { background-color: #ffffff; color: #1f2937; border: 1px solid #e5e7eb; }
+.card-red { background-color: #fee2e2; color: #991b1b; }
+
+/* =========================================
+   ABOUT PAGE LAYOUT (Text left, Image right)
+   ========================================= */
+.about-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 2rem;
 }
 
-/* White Circle (Ongoing) */
-.card-white {
-  background-color: #ffffff; /* White */
-  color: #1f2937; /* Dark gray text */
-  border: 1px solid #e5e7eb; /* Adds a faint border so it's visible against white backgrounds */
+.about-text {
+  flex: 1.5;
 }
 
-/* Light Red Circle (Collaborations) */
-.card-red {
-  background-color: #fee2e2; /* Light red */
-  color: #991b1b; /* Dark red text */
+.about-image {
+  flex: 1;
 }
 
-/* Pages */
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* General Page Styles */
 .page {
   padding: 4rem 0;
 }
@@ -207,6 +218,13 @@ footer {
   padding: 1.5rem 0;
   margin-top: 3rem;
   text-align: center;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column; /* Stacks on mobile */
+  }
 }
 
 @media (max-width: 600px) {
