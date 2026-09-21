@@ -11,7 +11,6 @@
 
   <header>
     <div class="container header-inner">
-      <!-- Logo added here, same as your home page -->
       <h1><a href="index.html"><img src="logo.png" alt="TNT Nanobiotech Logo" class="logo"></a></h1>
       <nav>
         <a href="index.html">Home</a>
@@ -24,18 +23,21 @@
   <main>
     <section class="container page">
       <h2>Contact</h2>
+      
+      <!-- The image is placed here on the right -->
+      <img src="contact-side.png" alt="TNT Nanobiotech Lab" class="contact-side-img">
+
       <p>You can reach us at:</p>
       <p><a href="mailto:m.mousazadeh95@gmail.com">m.mousazadeh95@gmail.com</a></p>
       <p><a href="mailto:m.h.fouani@gmail.com">m.h.fouani@gmail.com</a></p>
       
       <p>You can also contact us on social media using the following ID:</p>
-      <!-- I made this a clickable Instagram link assuming @yas_bio_usr is an Instagram handle -->
-      <p><a href=>@yas_bio_usr</a></p>
+      <!-- Plain text, no links -->
+      <p>
+        @yas_bio_usr <br>
+      </p>
 
-      <!-- Updated form to use your Formspree endpoint -->
       <form class="contact-form" action="https://formspree.io/f/mnpndpvl" method="POST">
-        
-        <!-- This makes the email subject line nice when you receive the form submission -->
         <input type="hidden" name="_subject" value="New submission from TNT website!">
         
         <label for="name">Name</label>
