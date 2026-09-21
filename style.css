@@ -42,7 +42,11 @@ header {
   gap: 1rem;
 }
 
-header h1 a {
+header h1 a .logo {
+  height: 50px; /* Change this number to make it bigger or smaller */
+  width: auto;  /* This keeps the logo from stretching weirdly */
+  vertical-align: middle;
+
   color: #111827;
   font-size: 1.4rem;
 }
@@ -88,7 +92,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #1d4ed8;
+  background: #00ff00;
   text-decoration: none;
 }
 
