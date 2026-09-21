@@ -78,21 +78,26 @@ nav a:hover {
   color: #4b5563;
 }
 
+/* =========================================
+   BUTTONS: Swapped colors
+   ========================================= */
 .btn {
   display: inline-block;
-  background: #064E3B; /* Changed to Dark Emerald Green */
+  background: #1e3a8a; /* Dark Blue (Default) */
   color: #ffffff;
   padding: 0.75rem 1.25rem;
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease; /* Smooth color change */
 }
 
 .btn:hover {
-  background: #1e3a8a; /* Changed to Dark Blue on hover */
+  background: #064E3B; /* Dark Emerald Green (On Hover) */
   text-decoration: none;
 }
+/* ========================================= */
 
 /* Features (Updated for circles) */
 .features {
