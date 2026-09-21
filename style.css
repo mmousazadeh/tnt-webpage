@@ -175,12 +175,28 @@ nav a:hover {
    CONTACT PAGE: Floating image on the right
    ========================================= */
 .contact-side-img {
-  float: right;         /* Places the image on the right side */
-  width: 300px;         /* Adjust this number to make it bigger/smaller */
+  float: right;
+  width: 300px;
   height: auto;
-  margin-left: 2rem;    /* Space between the text and the image */
-  margin-bottom: 1rem;  /* Space below the image */
+  margin-left: 2rem;
+  margin-bottom: 1rem;
   border-radius: 10px;
+}
+
+/* =========================================
+   FLOATING CORNER IMAGE (About Page)
+   ========================================= */
+.corner-img {
+  position: fixed;        /* Sticks to the screen when scrolling */
+  bottom: -120px;         /* Pushes it off the bottom edge */
+  right: -120px;          /* Pushes it off the right edge */
+  width: 400px;           /* Size of the circle */
+  height: 400px;          /* Must match width */
+  border-radius: 50%;     /* Makes it a circle */
+  object-fit: cover;      /* Prevents stretching */
+  opacity: 0.3;           /* Lightens it (0.1 very faint, 1 solid) */
+  z-index: -1;            /* Puts it BEHIND your text */
+  pointer-events: none;   /* Prevents it from blocking clicks */
 }
 
 /* General Page Styles */
@@ -245,6 +261,15 @@ footer {
     display: block;
     margin: 0 auto 1.5rem auto; /* Centers it on mobile */
     width: 80%;
+  }
+
+  /* Adjusts the floating corner image for mobile so it doesn't cover text */
+  .corner-img {
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    right: -60px;
+    opacity: 0.2;
   }
 }
 
