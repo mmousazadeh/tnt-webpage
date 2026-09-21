@@ -64,7 +64,7 @@ nav a:hover {
 .hero {
   padding: 8rem 0;
   text-align: center;
-  /* Adds a 70% white overlay on top of the image to lighten it */
+  /* Adds a 50% white overlay on top of the image to lighten it */
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
               url('hero-bg.jpg') no-repeat center center;
   background-size: cover;
@@ -171,6 +171,18 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* =========================================
+   CONTACT PAGE: Floating image on the right
+   ========================================= */
+.contact-side-img {
+  float: right;         /* Places the image on the right side */
+  width: 300px;         /* Adjust this number to make it bigger/smaller */
+  height: auto;
+  margin-left: 2rem;    /* Space between the text and the image */
+  margin-bottom: 1rem;  /* Space below the image */
+  border-radius: 10px;
+}
+
 /* General Page Styles */
 .page {
   padding: 4rem 0;
@@ -225,6 +237,14 @@ footer {
 @media (max-width: 768px) {
   .about-layout {
     flex-direction: column; /* Stacks on mobile */
+  }
+
+  /* Makes the contact image drop below the text on phones */
+  .contact-side-img {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem auto; /* Centers it on mobile */
+    width: 80%;
   }
 }
 
