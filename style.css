@@ -62,24 +62,25 @@ nav a:hover {
    HERO (Home Page Background Image)
    ========================================= */
 .hero {
-  padding: 8rem 0; /* Increased padding so the image is nice and tall */
+  padding: 8rem 0;
   text-align: center;
-  background: url('hero-bg.jpg') no-repeat center center;
+  /* Adds a 70% white overlay on top of the image to lighten it */
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('hero-bg.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
 }
 
-/* White text to stand out against the dark blue image */
 .hero h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
-  color: #ffffff; 
+  color: #000000; /* Black text */
 }
 
 .hero p {
   font-size: 1.15rem;
   margin-bottom: 2rem;
-  color: #f1f5f9;
+  color: #111827; /* Very dark gray for the paragraph */
 }
 
 /* =========================================
