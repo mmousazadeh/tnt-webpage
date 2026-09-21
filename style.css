@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: #2563eb;
+  color: #1e3a8a;
   text-decoration: none;
 }
 
@@ -80,7 +80,7 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  background: #2563eb;
+  background: #1e3a8a;
   color: #ffffff;
   padding: 0.75rem 1.25rem;
   border: none;
@@ -90,7 +90,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #064E3B; /* Your dark green hover color */
+  background: #1e3a8a; /* Your dark green hover color */
   text-decoration: none;
 }
 
@@ -138,7 +138,7 @@ nav a:hover {
 /* Light Green Circle (Finished) */
 .card-green {
   background-color: #d1fae5; /* Light green */
-  color: #064e3b; /* Dark green text */
+  color: #1e3a8a; /* Dark green text */
 }
 
 /* White Circle (Ongoing) */
