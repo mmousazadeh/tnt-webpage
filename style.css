@@ -1,62 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tnt-nanobiotech.ir — Contact</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="logo.png">
-</head>
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <header>
-    <div class="container header-inner">
-      <h1><a href="index.html"><img src="logo.png" alt="TNT Nanobiotech Logo" class="logo"></a></h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f9fafb;
+}
 
-  <main>
-    <section class="container page">
-      <h2>Contact</h2>
-      <p>You can reach us at:</p>
-      <p><a href="mailto:m.mousazadeh95@gmail.com">m.mousazadeh95@gmail.com</a></p>
-      <p><a href="mailto:m.h.fouani@gmail.com">m.h.fouani@gmail.com</a></p>
-      
-      <p>You can also contact us on social media using the following ID:</p>
-      <p>
-        <a href="https://t.me/yas_bio_usr" target="_blank">@yas_bio_usr</a> (Telegram)<br>
-        <a href="https://ble.ir/yas_bio_usr" target="_blank">@yas_bio_usr</a> (Bale)
-      </p>
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
 
-      <!-- Formspree Form -->
-      <form class="contact-form" action="https://formspree.io/f/mnpndpvl" method="POST">
-        <input type="hidden" name="_subject" value="New submission from TNT website!">
-        
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+a:hover {
+  text-decoration: underline;
+}
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+/* Header */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-        <!-- This button now shares the exact same .btn class -->
-        <button class="btn" type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 tnt-nanobiotech.ir. All rights reserved.</p>
-    </div>
-  </footer>
+header h1 a .logo {
+  height: 50px; /* Change this number to make it bigger or smaller */
+  width: auto;  /* This keeps the logo from stretching weirdly */
+  vertical-align: middle;
 
-</body>
-</html>
+  color: #111827;
+  font-size: 1.4rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  color: #4b5563;
+}
+
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #064E3B;
+  text-decoration: none;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+/* Pages */
+.page {
+  padding: 4rem 0;
+}
+
+.page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.page p {
+  margin-bottom: 1rem;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 2rem;
+  max-width: 600px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+}
