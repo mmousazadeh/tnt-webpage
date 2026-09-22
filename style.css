@@ -58,10 +58,13 @@ nav a:hover {
   color: #2563eb;
 }
 
-/* HERO (Home Page Background Image) */
+/* =========================================
+   HERO (Home Page Background Image)
+   ========================================= */
 .hero {
   padding: 8rem 0;
   text-align: center;
+  /* Adds a 50% white overlay on top of the image to lighten it */
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
               url('hero-bg.jpg') no-repeat center center;
   background-size: cover;
@@ -80,10 +83,12 @@ nav a:hover {
   color: #111827;
 }
 
-/* BUTTONS: Blue default, Green on hover */
+/* =========================================
+   BUTTONS: Blue default, Green on hover
+   ========================================= */
 .btn {
   display: inline-block;
-  background: #1e3a8a;
+  background: #1e3a8a; /* Dark Blue (Default) */
   color: #ffffff;
   padding: 0.75rem 1.25rem;
   border: none;
@@ -94,7 +99,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #064E3B;
+  background: #064E3B; /* Dark Emerald Green (On Hover) */
   text-decoration: none;
 }
 
@@ -141,7 +146,9 @@ nav a:hover {
 .card-white { background-color: #ffffff; color: #1f2937; border: 1px solid #e5e7eb; }
 .card-red { background-color: #fee2e2; color: #991b1b; }
 
-/* ABOUT PAGE LAYOUT (Text left, Image right) */
+/* =========================================
+   ABOUT PAGE LAYOUT (Text left, Image right)
+   ========================================= */
 .about-layout {
   display: flex;
   gap: 3rem;
@@ -164,7 +171,9 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* CONTACT PAGE: Floating image on the right */
+/* =========================================
+   CONTACT PAGE: Floating image on the right
+   ========================================= */
 .contact-side-img {
   float: right;
   width: 300px;
@@ -176,22 +185,22 @@ nav a:hover {
 
 /* =========================================
    FLOATING CORNER IMAGE (About Page)
-   Bigger + Oval shape + Visible
+   Big oval covering the bottom-right corner
    ========================================= */
 .corner-img {
   position: fixed;
-  bottom: -180px;         /* Pushed off the bottom edge */
-  right: -200px;          /* Pushed off the right edge */
-  width: 700px;           /* Wider = oval shape */
-  height: 450px;          /* Shorter than width = oval */
-  border-radius: 50%;     /* With different w/h, this makes an oval */
+  bottom: -250px;         /* Pushed off the bottom edge */
+  right: -250px;          /* Pushed off the right edge */
+  width: 1000px;          /* Wide = oval shape */
+  height: 650px;          /* Shorter than width = oval */
+  border-radius: 50%;     /* Oval shape */
   object-fit: cover;
-  opacity: 0.3;
-  z-index: 0;             /* FIXED: was -1, now visible */
-  pointer-events: none;
+  opacity: 0.3;           /* Lightens it */
+  z-index: 0;             /* Visible, above the body background */
+  pointer-events: none;   /* Doesn't block clicks */
 }
 
-/* Makes sure your text stays on top of the floating image */
+/* Makes sure your text stays on top of the floating oval */
 header, main, footer {
   position: relative;
   z-index: 1;
@@ -250,22 +259,23 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .about-layout {
-    flex-direction: column;
+    flex-direction: column; /* Stacks on mobile */
   }
 
+  /* Makes the contact image drop below the text on phones */
   .contact-side-img {
     float: none;
     display: block;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 1.5rem auto; /* Centers it on mobile */
     width: 80%;
   }
 
   /* Smaller oval for mobile */
   .corner-img {
-    width: 350px;
-    height: 220px;
-    bottom: -90px;
-    right: -100px;
+    width: 500px;
+    height: 320px;
+    bottom: -130px;
+    right: -130px;
     opacity: 0.2;
   }
 }
