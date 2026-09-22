@@ -176,19 +176,19 @@ nav a:hover {
 
 /* =========================================
    FLOATING CORNER IMAGE (About Page)
-   Quarter-circle starting under the header
+   Quarter-circle anchored to BOTTOM-RIGHT
    ========================================= */
 .corner-img {
   position: fixed;
-  top: 90px;              /* Starts exactly under the white header */
-  right: 0;               /* Anchored to the right edge */
-  width: 50vh;            /* Size of the quarter circle */
-  height: 50vh;           /* Equal to width for a perfect circle base */
-  border-radius: 0 0 0 100%; /* Bottom-left rounded = Quarter circle */
-  object-fit: cover;      /* Prevents stretching */
-  opacity: 0.3;           /* Lightens it */
-  z-index: 0;             /* Visible, above the page background */
-  pointer-events: none;   /* Doesn't block clicks */
+  bottom: 0;                /* Anchored to the bottom edge */
+  right: 0;                 /* Anchored to the right edge */
+  width: 75vh;              /* Bigger size */
+  height: 75vh;             /* Equal to width for a perfect circle base */
+  border-radius: 100% 0 0 0; /* Curve on top-left = Quarter-circle facing up-left */
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Keeps your text on top of the floating image */
@@ -262,10 +262,10 @@ footer {
 
   /* Smaller quarter-circle for mobile */
   .corner-img {
-    top: 80px;
+    bottom: 0;
     right: 0;
-    width: 40vh;
-    height: 40vh;
+    width: 55vh;
+    height: 55vh;
     opacity: 0.2;
   }
 }
