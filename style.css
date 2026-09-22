@@ -58,13 +58,10 @@ nav a:hover {
   color: #2563eb;
 }
 
-/* =========================================
-   HERO (Home Page Background Image)
-   ========================================= */
+/* HERO (Home Page Background Image) */
 .hero {
   padding: 8rem 0;
   text-align: center;
-  /* Adds a 50% white overlay on top of the image to lighten it */
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
               url('hero-bg.jpg') no-repeat center center;
   background-size: cover;
@@ -74,21 +71,19 @@ nav a:hover {
 .hero h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
-  color: #000000; /* Black text */
+  color: #000000;
 }
 
 .hero p {
   font-size: 1.15rem;
   margin-bottom: 2rem;
-  color: #111827; /* Very dark gray for the paragraph */
+  color: #111827;
 }
 
-/* =========================================
-   BUTTONS: Blue default, Green on hover
-   ========================================= */
+/* BUTTONS: Blue default, Green on hover */
 .btn {
   display: inline-block;
-  background: #1e3a8a; /* Dark Blue (Default) */
+  background: #1e3a8a;
   color: #ffffff;
   padding: 0.75rem 1.25rem;
   border: none;
@@ -99,7 +94,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #064E3B; /* Dark Emerald Green (On Hover) */
+  background: #064E3B;
   text-decoration: none;
 }
 
@@ -146,9 +141,7 @@ nav a:hover {
 .card-white { background-color: #ffffff; color: #1f2937; border: 1px solid #e5e7eb; }
 .card-red { background-color: #fee2e2; color: #991b1b; }
 
-/* =========================================
-   ABOUT PAGE LAYOUT (Text left, Image right)
-   ========================================= */
+/* ABOUT PAGE LAYOUT (Text left, Image right) */
 .about-layout {
   display: flex;
   gap: 3rem;
@@ -171,9 +164,7 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================================
-   CONTACT PAGE: Floating image on the right
-   ========================================= */
+/* CONTACT PAGE: Floating image on the right */
 .contact-side-img {
   float: right;
   width: 300px;
@@ -185,18 +176,25 @@ nav a:hover {
 
 /* =========================================
    FLOATING CORNER IMAGE (About Page)
+   Bigger + Oval shape + Visible
    ========================================= */
 .corner-img {
-  position: fixed;        /* Sticks to the screen when scrolling */
-  bottom: -120px;         /* Pushes it off the bottom edge */
-  right: -120px;          /* Pushes it off the right edge */
-  width: 400px;           /* Size of the circle */
-  height: 400px;          /* Must match width */
-  border-radius: 50%;     /* Makes it a circle */
-  object-fit: cover;      /* Prevents stretching */
-  opacity: 0.3;           /* Lightens it (0.1 very faint, 1 solid) */
-  z-index: -1;            /* Puts it BEHIND your text */
-  pointer-events: none;   /* Prevents it from blocking clicks */
+  position: fixed;
+  bottom: -180px;         /* Pushed off the bottom edge */
+  right: -200px;          /* Pushed off the right edge */
+  width: 700px;           /* Wider = oval shape */
+  height: 450px;          /* Shorter than width = oval */
+  border-radius: 50%;     /* With different w/h, this makes an oval */
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;             /* FIXED: was -1, now visible */
+  pointer-events: none;
+}
+
+/* Makes sure your text stays on top of the floating image */
+header, main, footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* General Page Styles */
@@ -252,23 +250,22 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .about-layout {
-    flex-direction: column; /* Stacks on mobile */
+    flex-direction: column;
   }
 
-  /* Makes the contact image drop below the text on phones */
   .contact-side-img {
     float: none;
     display: block;
-    margin: 0 auto 1.5rem auto; /* Centers it on mobile */
+    margin: 0 auto 1.5rem auto;
     width: 80%;
   }
 
-  /* Adjusts the floating corner image for mobile so it doesn't cover text */
+  /* Smaller oval for mobile */
   .corner-img {
-    width: 200px;
-    height: 200px;
-    bottom: -60px;
-    right: -60px;
+    width: 350px;
+    height: 220px;
+    bottom: -90px;
+    right: -100px;
     opacity: 0.2;
   }
 }
